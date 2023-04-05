@@ -66,7 +66,7 @@ const CartProvider = (props) => {
     dispatchCartaction({ type: "ADD", item: item }); //type→property name for identify the action
   };
   const removeItemFormcartHandler = (id) => {
-    dispatchCartaction({ type: "Remove", id: id });
+    dispatchCartaction({ type: "REMOVE", id: id });
   };
   const cartContext = {
     items: cartState.items,
