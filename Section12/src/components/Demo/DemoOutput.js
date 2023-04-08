@@ -11,5 +11,3 @@ const DemoOutput = (props) => {
 };
 
 export default React.memo(DemoOutput);
-
-// props.onClick === props.previous.onClick;

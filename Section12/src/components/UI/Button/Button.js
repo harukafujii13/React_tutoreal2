@@ -17,3 +17,6 @@ const Button = (props) => {
 };
 
 export default React.memo(Button);
+
+//props.onClick === props.previous.onClick
+//never equal that's why Button component is rendering
