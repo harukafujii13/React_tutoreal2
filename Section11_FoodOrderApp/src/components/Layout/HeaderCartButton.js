@@ -45,3 +45,7 @@ const HeaderCartButton = (props) => {
 };
 
 export default HeaderCartButton;
+
+//useEffectとは
+//re-renderingを防止する働きがある
+//DOMのように特定の要素を取得する働きがある

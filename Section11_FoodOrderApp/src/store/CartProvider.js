@@ -112,3 +112,7 @@ export default CartProvider;
 //items array with the new item using the concat() method.
 //Finally, it returns the updated state with the updated items array and the updated total amount.
 //If the action type is not "ADD", it returns the default cart state.
+
+//useReduserとは
+//複数のcomponentsのstateを管理するもの
+//useReduser + useContext = Redux
