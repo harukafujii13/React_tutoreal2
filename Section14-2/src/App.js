@@ -83,3 +83,30 @@ function App() {
 }
 
 export default App;
+
+//memo1
+//JSON.stringify(movie), which converts the movie object into a JSON string,
+//as the request payload to send to the server.
+
+//memo2
+//The headers property of the options object is set to specify the "Content-Type" header as "application/json",
+//indicating that the request payload is in JSON format.
+
+//memo3
+//Some common examples of HTTP headers include:
+//・Content-Type: Specifies the type of content being sent or received, such as "application/json"
+// for JSON data or "text/html" for HTML content.
+
+//・Content-Length: Indicates the length of the content
+// in the request or response body in bytes.
+
+//・Authorization: Contains credentials or tokens used for authentication or authorization purposes.
+
+//・Cache-Control: Specifies caching instructions for the request or response, such
+//  as "no-cache" to indicate that the response should not be cached.
+
+//・User-Agent: Contains information about the client making the request, such as the type of browser or device being used.
+
+//Headers are important for communication between clients (such as web browsers) and servers,
+//as they provide additional information about the request or response, allowing for more effective
+//communication and handling of the exchanged data.
