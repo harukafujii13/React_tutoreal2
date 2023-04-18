@@ -60,3 +60,27 @@ export default NewTask;
 //props.onAddTask(createdTask) function is called, which is a callback function
 //passed as a prop to this component. It is responsible for updating the state in the parent component
 //with the newly created task object, so that it can be rendered in the UI.
+
+//createTask.bind(null, taskText)
+//The createTask.bind(null, taskText) expression is used to bind
+//the createTask function with a specific value for the taskText argument,
+//creating a new function that can be called later.
+
+//In JavaScript, the bind method is used to create a new function that,
+//when invoked, has a specific value for this and/or specific arguments passed to it.
+//The first argument to bind is the value to be used as this inside the function,
+//and subsequent arguments are the arguments that will be passed to the function when it is invoked.
+
+//In this case, createTask.bind(null, taskText) is binding the createTask function
+//with null as the value for this (since createTask does not use this),
+//and taskText as the value for the first argument of createTask. This creates a new function
+//that is equivalent to calling createTask(taskText) directly. However, this new function
+//can be passed as a callback to other functions, like the sendRequest function in the useHttp hook,
+//which can then invoke it with the correct taskText argument when needed.
+
+//*In the code provided, the bound createTask function is passed
+//as a callback to the sendRequest function as the applyData argument.
+//This means that after a successful HTTP request, the applyData function
+//will be called with the parsed response data, and the createTask function will be
+//invoked with taskText as its argument, effectively creating a new task
+//with the correct taskText value extracted from the HTTP response.
