@@ -31,3 +31,13 @@ const useInput = (validateValue) => {
 };
 
 export default useInput;
+
+//memo1
+//The validateValue function takes the entered value as an argument and
+//returns a boolean value based on whether the entered value is valid or not.
+
+//memo2
+//excute
+//1. useInput((value) => value.trim() !== "")
+//2. const valueIsValid = validateValue(enteredValue);
+//   const hasError = !valueIsValid && isTouched;
