@@ -1,4 +1,3 @@
-import { useState } from "react";
 import useInput from "../hooks/use-input";
 
 const SimpleInput = (props) => {
@@ -12,7 +11,7 @@ const SimpleInput = (props) => {
   } = useInput((value) => value.trim() !== "");
 
   const {
-    valid: enteredEmail,
+    value: enteredEmail,
     isValid: enteredEmailIsValid,
     hasError: emailInputHasError,
     valueChangeHandler: emailInputChangeHandler,
