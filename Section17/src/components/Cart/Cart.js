@@ -25,6 +25,19 @@ const Cart = (props) => {
     setIsCheckout(true);
   };
 
+  const submitOrderHandler = (userData) => {
+    fetch(
+      "https://food-order-app-21e66-default-rtdb.firebaseio.com/orders.json",
+      {
+        method: "POST",
+        body: JSON.stringify({
+          user: userData,
+          orderItems: cartCtx.items,
+        }),
+      }
+    );
+  };
+
   const cartItems = (
     <ul className={classes["cart-items"]}>
       {cartCtx.items.map((item) => (
@@ -60,10 +73,24 @@ const Cart = (props) => {
         <span>Total Amount</span>
         <span>{totalAmount}</span>
       </div>
-      {isCheckout && <Checkout onCancel={props.onClose} />}
+      {isCheckout && (
+        <Checkout onConfirm={submitOrderHandler} onCancel={props.onClose} />
+      )}
       {!isCheckout && modalActions}
     </Modal>
   );
 };
 
 export default Cart;
+
+//memo1
+//The request body is an object that includes two properties: user,
+//which is set to the userData argument passed into the function,
+//and orderItems, which is set to the items property of the cartCtx object.
+//The items property is an array of objects, with each object representing
+//an item in the cart and containing the id, name, amount, and price of the item.
+
+//memo2
+//The JSON.stringify() function is used to convert the request body object
+//into a JSON string before it is sent in the request. This is necessary
+//because the request body must be a string.
